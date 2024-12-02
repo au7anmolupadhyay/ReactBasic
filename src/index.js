@@ -5,12 +5,11 @@ import './style.css';
 import Header from './components/header';
 import Item from './components/items';
 import Button from './components/button';
-import Counter from './components/Counter';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <div className='card'>
-        <Counter/>
+        {/* <Counter/> */}
         <Header heading = "TODO List"/>
         <Item completed = "true" text = "Eat"/>
         <Item text = "Play Cricket"/>
