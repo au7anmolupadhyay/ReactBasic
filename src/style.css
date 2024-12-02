@@ -29,6 +29,7 @@ html, body {
 
 .dots-item{
     margin-left: auto;
+    cursor: pointer;
 }
 
 .add-btn{

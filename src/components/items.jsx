@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Item = () => {
+const Item = (props) => {
     return (
         <li className='list-item'>
-            <input type="checkbox" />
-            <span className='text-item'>Play Cricket</span>
+            {props.completed ? <></> : <input type="checkbox" />}
+            <span className='text-item'>{props.text}</span>
             <span className='dots-item'>...</span>
         </li>
     )
