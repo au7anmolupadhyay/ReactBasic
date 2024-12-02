@@ -4,9 +4,13 @@ const MyComponent = () =>{
 
     const [count, setValue] = useState(14);
 
+    useEffect(() => {
+        console.log("My component has been mounted..............");
+    }, [])
+
     useEffect (() => {
-        console.log("My component has been mounted...............");
-    }, [count]);
+        console.log(`Value is : ${count}`);
+    }, [count]); //dependency array, whatever is updating or can be updated is passed to execute useEffect
 
     return (
         <div>
