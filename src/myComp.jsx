@@ -6,10 +6,14 @@ const MyComponent = () =>{
 
     useEffect(() => {
         console.log("My component has been mounted..............");
-    }, [])
+    }, []);
 
     useEffect (() => {
         console.log(`Value is : ${count}`);
+
+        return function (){
+            console.log(`umounting of count...............${count}`)
+        };
     }, [count]); //dependency array, whatever is updating or can be updated is passed to execute useEffect
 
     return (
