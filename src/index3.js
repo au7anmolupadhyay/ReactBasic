@@ -1,13 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import Board from './tictactoe/board';
-import './App.css'
+import Timer from './components/Timer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <div>
-        <Board/>
-    </div>
-);
-
+    <Timer/>
+)
