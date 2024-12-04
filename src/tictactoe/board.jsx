@@ -20,9 +20,9 @@ const Board = () => {
 
     for(let logic of winnerLogic){
       const [a,b,c] = logic;
-      if(state[a] !== null && state[a] === state[b] && state[a] === state[c]) return true;
+      if(state[a] !== null && state[a] === state[b] && state[a] === state[c]) return state[a];
     }
-    return false;
+    return null;
   }
 
   const isWinner = checkWinner();
@@ -38,7 +38,7 @@ const Board = () => {
   return (
     
     <div className="board-container">
-      {isWinner ? <>Someone Won</> :
+      {isWinner ? <>{isWinner} Won the game</> :
       <>
       <div className="board-row">
         <Square onClick={()=> handleClick(0)} value ={state[0]} />
